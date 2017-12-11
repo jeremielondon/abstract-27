@@ -287,10 +287,13 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form name="sentMessage" novalidate data-netlify="true">
+                    <form name="sentMessage" novalidate netlify-honeypot="bot-field" action="thank-you" netlify>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
+                                    <p class="hidden">
+                                    <label>Don’t fill this out: <input name="bot-field"></label>
+                                    </p>
                                     <input type="text" class="form-control" placeholder="Your Name *" name="name" required data-validation-required-message="Please enter your name.">
                                     <p class="help-block text-danger"></p>
                                 </div>
@@ -484,7 +487,7 @@
 
     <!-- Contact form JavaScript -->
     <script src="js/jqBootstrapValidation.min.js"></script>
-    
+
 
     <!-- Custom JavaScript for this theme -->
     <script src="js/agency.min.js"></script>
